@@ -1,0 +1,29 @@
+        static void Main(string[] args)
+        {
+            Random slumpsak = new Random();
+            int slumpattal = slumpsak.Next(1, 100);
+            Console.WriteLine("Gissa ett tal mellan 1 och 100");
+            string str = Console.ReadLine();
+            int tal = Convert.ToInt32(str);
+
+          
+            {
+                Console.WriteLine("Fel testa igen!");
+                str = Console.ReadLine();
+                tal = Convert.ToInt32(str);
+                if (tal > slumpattal)
+                {
+                    Console.WriteLine("Talet är mindre");
+                }
+                else if (tal < slumpattal)
+                {
+                    Console.WriteLine("Talet är större");
+                }
+
+            }
+            while (tal != slumpattal);
+            Console.WriteLine("Rätt svar!");
+            Console.ReadLine();
+        }
+    }
+}
